@@ -1,22 +1,20 @@
-/*
-祝津一
-2004240205
-统计单词数
-*/
+//ͳ�Ƶ�������
 #include<stdio.h>
 int main()
 {
-    char s[80];
-    int c=0,i=0;
-    gets(s);
-    while(s[i]!='\0'){
-        if((s[i]>='a'&&s[i]<='z')||(s[i]>='A'&&s[i]<='Z')||(s[i]>='0'&&s[i]<='9')){
-            c++;
-            while(s[i]!=' '&&s[i]!='\0')
-                i++;
-        }
-        i++;
-    }
-    printf("单词数为%d",c);
-    return 0;
+  char a[1000];
+  gets(a);
+  int l,num=0,i;
+  for(i=0;a[i]!='\0';i++);
+  l=i;
+  for(i=0;i<l;i++)
+  {
+      if(a[i]!=' ' && a[i+1]==' ')
+          num++;
+      if(a[i]!=' ' && a[i+1]=='\0')
+          num++;
+  }
+  printf("%d\n",num);
+  return 0; 
 }
+
