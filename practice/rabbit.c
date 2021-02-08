@@ -2,7 +2,7 @@
 #include<stdio.h>
 int main()
 {
-    int x,a[10000]={0},n,i,c=0,j=1;
+    int x,a[10001]={0},n,i,c=0,j=1;
     scanf("%d%d",&x,&n);
     while(j<=x)
     {
