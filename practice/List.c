@@ -50,6 +50,7 @@ Link AppendNode(Link head,int data)
     return head;
 
 }
+
 /*在此实现DisplyNode函数 */
 void DisplyNode(Link head){
     Link p;
