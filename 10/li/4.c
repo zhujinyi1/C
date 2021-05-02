@@ -1,23 +1,22 @@
 /*
-×£½òÒ»
+ç¥æ´¥ä¸€
 2004240205
-ººÅµËşÎÊÌâ
+æ±‰è¯ºå¡”é—®é¢˜
 */
 #include<stdio.h>
-int i=0;                                      //¼ÇÂ¼µİ¹éµÄ²ã´ÎÊıÁ¿
+int i=0;                                      //è®°å½•é€’å½’çš„å±‚æ¬¡æ•°é‡
 hanoi(n,a,b,c)
 {
-	char a,b,c;
-	int n;
+	
 	if(n>0)
 	{
-		if (n==1)  printf("%c¡ú%c\n",a,c);
+		if (n==1)  printf("%câ†’%c\n",a,c);
 		else
 		{
-			hanoi(n-1,a,c,b);                 //µÚÒ»²½
+			hanoi(n-1,a,c,b);                 //ç¬¬ä¸€æ­¥
 			++i;
-			printf("%c¡ú%c\n",a,c);      //µÚ¶ş²½
-			hanoi(n-1,b,a,c);                  //µÚÈı²½
+			printf("%câ†’%c\n",a,c);      //ç¬¬äºŒæ­¥
+			hanoi(n-1,b,a,c);                  //ç¬¬ä¸‰æ­¥
 		}
 	}
 	else printf("n<=0 is err.!");
@@ -26,9 +25,9 @@ hanoi(n,a,b,c)
 int main()
 {
 	int n;
-	printf("ÇëÊäÈë½ğÅÌµÄÊıÁ¿:");
+	printf("è¯·è¾“å…¥é‡‘ç›˜çš„æ•°é‡:");
 	scanf("%d",&n);
-	printf("\n%d¸öÅÌÒÆ¶¯µÄ²½ÖèÊÇ:\n",n);
+	printf("\n%dä¸ªç›˜ç§»åŠ¨çš„æ­¥éª¤æ˜¯:\n",n);
 	hanoi(n,'a','b','c');
-	printf("×Ü¹²ÓĞµİ¹é:%d   ²ã!\n",i);
+	printf("æ€»å…±æœ‰é€’å½’:%d   å±‚!\n",i);
 }
