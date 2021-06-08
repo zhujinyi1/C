@@ -1,4 +1,4 @@
-//统计单词数量
+//统锟狡碉拷锟斤拷锟斤拷锟斤拷
 #include<stdio.h>
 int main()
 {
