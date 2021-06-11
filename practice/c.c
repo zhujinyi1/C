@@ -27,30 +27,20 @@ void shuru()
 void paixu()
 {
 	int i,j;
+	int p,q;
 	struct contact temp;
 	for(i=0;i<n-1;i++)
 	{
-		for(j=n-1;j>0;j--)
-			if(c[j].birth.year>c[j+1].birth.year)
-			{
-				temp=c[j];
-				c[j]=c[j+1];
-				c[j+1]=temp;
+		for(j=i;j<n;j++){
+			p = c[i].birth.day+c[i].birth.month*31+c[i].birth.year*12*31;
+			q = c[j].birth.day+c[j].birth.month*31+c[j].birth.year*12*31;
+			if(p>q){
+				temp = c[i];
+				c[i] = c[j];
+				c[j] = temp;
 			}
-			else if(c[j].birth.year=c[j+1].birth.year)
-				if(c[j].birth.month>c[j+1].birth.month)
-				{
-					temp=c[j];
-					c[j]=c[j+1];
-					c[j+1]=temp;
-				}
-				else if(c[j].birth.month=c[j+1].birth.month)
-					if(c[j].birth.day>c[j+1].birth.day)
-					{
-						temp=c[j];
-						c[j]=c[j+1];
-						c[j+1]=temp;
-					}
+		}
+
 	}
 }
 void shuchu()
